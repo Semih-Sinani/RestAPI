@@ -16,7 +16,7 @@ class CustomerFactory extends Factory
      */
     public function definition(): array
     {
-        $type = $this->faker->randomElement('I' , 'B');
+        $type = $this->faker->randomElement(['I' , 'B']);
         $name = $type =='I' ? $this->faker->name() : $this->faker->company();
         return [
             'name' => $name,

@@ -17,7 +17,7 @@ class InvoiceFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
         $status = $this->faker->randomElement(['B' , 'P' , 'V']);
         return [
