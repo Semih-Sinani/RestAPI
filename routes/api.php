@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// its probably want to show the redline in code
+// authorized by Semih-Sinani
+
+Route::group(['prefix' => 'v1' , 'namespace' => 'App\Http\Controllers\Api\V1'], function (){
+        Route::apiResource('customer' , CustomerController::class);
+        Route::apiResource('invoices' , InvoiceController::class);
+});
