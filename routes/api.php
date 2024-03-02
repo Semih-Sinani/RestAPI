@@ -22,6 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // authorized by Semih-Sinani
 
 Route::group(['prefix' => 'v1' , 'namespace' => 'App\Http\Controllers\Api\V1'], function (){
-        Route::apiResource('customer' , CustomerController::class);
+        Route::apiResource('customers' , CustomerController::class);
         Route::apiResource('invoices' , InvoiceController::class);
 });
